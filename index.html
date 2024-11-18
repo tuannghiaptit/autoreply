@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Tự Động Trả Lời</title>
+    <script>
+        // Function tự động gửi thông báo sau khi người dùng gửi form
+        function autoReply() {
+            alert("Cảm ơn bạn đã gửi yêu cầu! Chúng tôi sẽ phản hồi lại trong thời gian sớm nhất. Hãy liên hệ tôi qua 0973.861.359 khi bạn cần tư vấn gấp");
+            document.getElementById("contactForm").reset();  // Reset form sau khi gửi
+        }
+    </script>
+</head>
+<body>
+    <h2>Form Liên Hệ</h2>
+    <form id="contactForm" onsubmit="autoReply(); return false;">
+        <label for="name">Họ và tên:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="Số điện thoại">Số điện thoại:</label><br>
+        <input type="Số điện thoại" id="Số điện thoại" name="Số điện thoại" required><br><br>
+
+        <label for="message">Tin nhắn:</label><br>
+        <textarea id="message" name="message" required></textarea><br><br>
+
+        <input type="submit" value="Gửi">
+    </form>
+</body>
+</html>
